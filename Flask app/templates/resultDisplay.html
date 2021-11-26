@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body{
+            background-color: rgba(8, 8, 8, 0.89);
+            color:white;
+            font-size: larger;
+        }
+        fieldset{
+            margin:auto;
+            width:50%;
+            border-radius: 10px;
+            
+        }
+        input{
+            background-color: aqua;
+            height:40px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+        markred{
+            background-color:red;
+        }
+        markgreen{
+            background-color:lightgreen;
+        }
+    </style>
+</head>
+<body>
+<form action="/" method="POST">
+    <fieldset style="width:500px;margin-top:10%;">
+        <legend><b> Sentence-Wise Analysis: </b></legend>
+        <ol id="mes">
+        {% for message in session["messages"] %}
+        <li>{{ message }}</li><br>
+        {% endfor %}
+        </ol><br>
+        <input type = "Submit" value="Go Back">
+    </fieldset>
+</form>
+<script>
+    var lis = document.getElementById('mes').getElementsByTagName('li');
+    var i;
+    for (i=0; i<lis.length; i++){
+
+        var temp = lis[i].innerHTML;
+        var len = temp.length;
+        if (temp.substring(len-13) == "NOT OFFENSIVE") {
+            lis[i].innerHTML = "<markgreen>" + lis[i].innerHTML.substring(0,len-15) + "</markgreen>" + lis[i].innerHTML.substring(len-15,len);
+        }
+        else {
+            lis[i].innerHTML = "<markred>" + lis[i].innerHTML.substring(0,len-11) + "</markred>" + lis[i].innerHTML.substring(len-11);
+        }
+    }
+</script>
+</body>
+</html>

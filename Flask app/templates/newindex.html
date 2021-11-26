@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Offensive Identification</title>
+    <style>
+        body{
+            background-color: rgba(8, 8, 8, 0.89);
+            text-align: center;
+            color:aqua;
+        }
+        form{
+            margin-top: 10%;
+        }
+        fieldset{
+            margin:auto;
+            width:70%;
+            border-radius: 10px;
+        }
+        input{
+            
+            height:50px;
+            cursor: pointer;
+            
+        }
+        a{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <form action="/resultFile" method="POST" enctype="multipart/form-data">
+        <h1> Welcome to Offensive Language Identification </h1>
+        <fieldset >
+            <legend><b>Upload document to check:</b></legend>
+        <input type="file" class="custom-file-input" name="doc" required /><br><br><br>
+        <input type="submit" style="background-color: aqua;border-radius: 15px;" value="CHECK" />
+        <a href="/textInput">Have a text to check instead?</a>
+        </fieldset>
+    </form>
+</body>
+</html>

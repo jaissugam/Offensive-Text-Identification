@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Offensive Identification</title>
+    <style>
+        body{
+            background-color: rgba(8, 8, 8, 0.89);
+            text-align: center;
+            color:aqua;
+        }
+        form{
+            margin-top: 10%;
+        }
+        fieldset{
+            margin:auto;
+            width:50%;
+            border-radius: 10px;
+        }
+        textarea{
+            width:80%;
+            height:40%;
+            border-radius: 10px;
+            background-color:aqua;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        input{
+            background-color: aqua;
+            height:40px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        a{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <form action="/resultText" method="POST">
+        <h1> Welcome to Offensive Language Identification </h1>
+        <fieldset>
+        <legend><b>Enter message to check:</b></legend><br>
+        <textarea name="userInput"  placeholder="Enter text here" required></textarea><br><br>
+        <input type="submit" value="CHECK" />
+        <a href="/fileInput" >Have a file to check instead?</a>
+        </fieldset>
+    </form>
+</body>
+</html>
