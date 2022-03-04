@@ -19,5 +19,5 @@
 ![image](https://user-images.githubusercontent.com/67289887/143850988-e4f451b0-7922-474b-a718-6fa74509ef29.png)
 ![image](https://user-images.githubusercontent.com/67289887/143851041-996adb38-74c6-4a97-9c99-464af6c538bd.png)
 
-
+For further explanation about the project, you can read our research paper [here](https://www.irjet.net/archives/V8/i11/IRJET-V8I11251.pdf)
 
