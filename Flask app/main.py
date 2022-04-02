@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request
-import identifier
+import newIdentifier
 app = Flask(__name__)
 
 
@@ -14,7 +14,7 @@ def home():
 
 @app.route("/result")
 def res(message):
-    out = identifier.checkMessage(message)
+    out = newIdentifier.checkMessage(message)
     if out == 0:
         return f"<h1>NOT OFFENSIVE</h1>"
     else:

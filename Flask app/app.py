@@ -1,5 +1,5 @@
 from flask import Flask, redirect, render_template, request, session
-import identifier
+import newIdentifier
 app = Flask(__name__)
 app.secret_key = "random"
 
@@ -34,7 +34,7 @@ def res():
     elif request.method == "POST":
         result = request.form.get('userInput')
         resultList = [result]
-        mes, out = identifier.checkMessage(resultList)
+        mes, out = newIdentifier.checkMessage(resultList)
         for i in range(len(mes)):
             resultNew = str(out[i])
             if resultNew == "[0]":
@@ -59,7 +59,7 @@ def reslt():
     else:
         document = request.files["doc"]
         document.save(document.filename)
-        mes, out = identifier.checkDocument(document.filename)
+        mes, out = newIdentifier.checkDocument(document.filename)
         for i in range(len(mes)):
             resultNew = str(out[i])
             if resultNew == "0":

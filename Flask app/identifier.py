@@ -148,6 +148,7 @@ def TrainModel():
 
     Tf_idfModel = TfidfVectorizer()
     Tf_idfModel.fit(x)
+    pickle.dump(Tf_idfModel,open('tfmodel.pkl','wb'))
     Tfidf_Train_X = Tf_idfModel.transform(Train_X)
     Tfidf_Test_X = Tf_idfModel.transform(Test_X)
     return Tfidf_Train_X, Train_Y, Tfidf_Test_X, Test_Y, Tf_idfModel
