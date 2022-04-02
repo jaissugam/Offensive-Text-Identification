@@ -31,7 +31,7 @@ def checkDocument(document):
         if len(ele) < 1:
             resultSentence.remove(ele)
     tfmodel=pickle.load(open('tfmodel.pkl','rb'))
-    Tfidf_user = tfmodel.transform(mes)
+    Tfidf_user = tfmodel.transform(resultSentence)
     model=pickle.load(open('model.pkl','rb'))
     output.append(model.predict(Tfidf_user))
     return resultSentence, output[0]

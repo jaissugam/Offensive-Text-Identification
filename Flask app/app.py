@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request, session
+from flask import Flask, redirect, render_template, request, session,url_for
 import newIdentifier
 app = Flask(__name__)
 app.secret_key = "random"
@@ -10,7 +10,7 @@ def main():
         session.pop("messages", None)
         return render_template("index.html")
     else:
-        return redirect("http://127.0.0.1:5000/textInput")
+        return render_template("index.html")
 
 
 @app.route("/textInput", methods=['GET', 'POST'])
@@ -29,7 +29,7 @@ def home2():
 def res():
     session.pop("messages", None)
     if request.method == "GET":
-        return redirect("http://127.0.0.1:5000")
+        return redirect(url_for('index'))
 
     elif request.method == "POST":
         result = request.form.get('userInput')
@@ -54,7 +54,7 @@ def res():
 def reslt():
     session.pop("messages", None)
     if request.method == "GET":
-        return redirect("http://127.0.0.1:5000")
+        return redirect(url_for('index'))
 
     else:
         document = request.files["doc"]
