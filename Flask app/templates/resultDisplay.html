@@ -1,17 +1,26 @@
 <html>
 <head>
-    <title>Result</title>
+    <title>Offensive Identification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         body{
             background-color: rgba(8, 8, 8, 0.89);
             color:white;
             font-size: larger;
         }
+        form{
+            margin:auto;
+        }
+        form .head{
+            text-align: center;
+            margin-top: 5%;
+        }
         fieldset{
             margin:auto;
-            width:50%;
+            width:70%;
             border-radius: 10px;
-            
+            border: 2px solid white;
         }
         input{
             background-color: aqua;
@@ -25,12 +34,16 @@
         markgreen{
             background-color:lightgreen;
         }
+        
     </style>
 </head>
 <body>
 <form action="/" method="POST">
-    <fieldset style="width:500px;margin-top:10%;">
-        <legend><b> Sentence-Wise Analysis: </b></legend>
+    <div class="head">
+        <b> We found the following results: </b>
+    </div>
+    
+    <fieldset>
         <ol id="mes">
         {% for message in session["messages"] %}
         <li>{{ message }}</li><br>
@@ -38,6 +51,7 @@
         </ol><br>
         <input type = "Submit" value="Go Back">
     </fieldset>
+    
 </form>
 <script>
     var lis = document.getElementById('mes').getElementsByTagName('li');
