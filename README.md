@@ -16,8 +16,11 @@
    - Execution time: **0.28s**
 ### Model used for the Web App: *Naive Bayes*
 ## Outputs:
-![image](https://user-images.githubusercontent.com/67289887/143850988-e4f451b0-7922-474b-a718-6fa74509ef29.png)
-![image](https://user-images.githubusercontent.com/67289887/143851041-996adb38-74c6-4a97-9c99-464af6c538bd.png)
+![1](https://user-images.githubusercontent.com/67289887/161747267-6fc49917-cd81-4233-b05f-e6c77121b48d.jpg)
+
+![2](https://user-images.githubusercontent.com/67289887/161747430-72ca5bcd-1869-4838-984b-eae1632451e8.jpg)
+
+
 
 For further explanation about the project, you can read our research paper [here](https://www.irjet.net/archives/V8/i11/IRJET-V8I11251.pdf)
 
